@@ -1,0 +1,19 @@
+{
+  "name": "newebpay-subscription-system",
+  "version": "1.0.0",
+  "description": "藍新金流訂閱付款系統",
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch app.js",
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "google-spreadsheet": "^4.1.1"
+  },
+  "engines": {
+    "node": "18.x"
+  },
+  "keywords": ["newebpay", "payment", "subscription", "google-sheets"],
+  "author": "Your Name",
+  "license": "MIT"
+}
