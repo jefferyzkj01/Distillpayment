@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>訂閱付款系統</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>選擇您的訂閱方案</h1>
+            <p>安全、快速的線上付款</p>
+        </header>
+
+        <div class="plans">
+            <div class="plan">
+                <h3>基礎方案</h3>
+                <div class="price">NT$ 299<span>/月</span></div>
+                <ul>
+                    <li>✓ 基本功能存取</li>
+                    <li>✓ Email 客服支援</li>
+                    <li>✓ 月度使用報告</li>
+                </ul>
+                <button class="btn-subscribe" data-plan="基礎方案" data-amount="299">
+                    選擇此方案
+                </button>
+            </div>
+
+            <div class="plan featured">
+                <div class="badge">推薦</div>
+                <h3>進階方案</h3>
+                <div class="price">NT$ 599<span>/月</span></div>
+                <ul>
+                    <li>✓ 所有基礎功能</li>
+                    <li>✓ 進階數據分析</li>
+                    <li>✓ 優先客服支援</li>
+                    <li>✓ 自訂報告功能</li>
+                </ul>
+                <button class="btn-subscribe" data-plan="進階方案" data-amount="599">
+                    選擇此方案
+                </button>
+            </div>
+
+            <div class="plan">
+                <h3>企業方案</h3>
+                <div class="price">NT$ 999<span>/月</span></div>
+                <ul>
+                    <li>✓ 所有進階功能</li>
+                    <li>✓ API 完整存取</li>
+                    <li>✓ 專屬客戶經理</li>
+                    <li>✓ 客製化開發</li>
+                </ul>
+                <button class="btn-subscribe" data-plan="企業方案" data-amount="999">
+                    選擇此方案
+                </button>
+            </div>
+        </div>
+
+        <!-- Email 輸入模態框 -->
+        <div id="emailModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>確認訂閱資訊</h2>
+                <form id="subscriptionForm">
+                    <div class="form-group">
+                        <label for="email">Email 地址 *</label>
+                        <input type="email" id="email" required placeholder="請輸入您的 Email">
+                    </div>
+                    <div class="form-group">
+                        <label>選擇的方案</label>
+                        <div class="selected-plan"></div>
+                    </div>
+                    <button type="submit" class="btn-primary">
+                        確認付款
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- 載入畫面 -->
+        <div id="loading" class="loading">
+            <div class="spinner"></div>
+            <p>正在建立付款連結...</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
